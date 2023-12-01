@@ -234,7 +234,7 @@ cdef class OrdinalHyperparameter(Hyperparameter):
         else:
             return False
 
-    def _sample(self, rs: np.random.RandomState, size: Optional[int] = None) -> int:
+    def _sample(self, rs: np.random.RandomState, size: Optional[int] = None) -> np.ndarray:
         """
         return a random sample from our sequence as order/position index
         """

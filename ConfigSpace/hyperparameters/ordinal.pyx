@@ -221,7 +221,7 @@ cdef class OrdinalHyperparameter(Hyperparameter):
         """
         return the sequence value of a given order/position
         """
-        return list(self.value_dict.keys())[list(self.value_dict.values()).index(idx)]
+        return list(self.value_dict.keys())[list(self.value_dict.values()).index(int(idx))]
 
     def check_order(self, val1: Union[int, str, float], val2: Union[int, str, float]) -> bool:
         """

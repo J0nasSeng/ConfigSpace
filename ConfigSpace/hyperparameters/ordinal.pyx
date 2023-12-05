@@ -284,10 +284,7 @@ cdef class OrdinalHyperparameter(Hyperparameter):
                         neighbors.append(candidate2)
 
         else:
-            print("==================")
-            print(value)
-            print(self.get_value(value))
-            if self.get_num_neighbors(self.get_value(value)) < len(self.sequence):
+            if self.get_num_neighbors(self.get_value(int(value))) < len(self.sequence):
                 index = value
                 neighbor_idx1 = index - 1
                 neighbor_idx2 = index + 1

@@ -290,7 +290,7 @@ cdef class CategoricalHyperparameter(Hyperparameter):
     def get_num_neighbors(self, value = None) -> int:
         return len(self.choices) - 1
 
-    def get_neighbors(self, value: int, rs: np.random.RandomState,
+    def get_neighbors(self, value: float, rs: np.random.RandomState,
                       number: Union[int, float] = np.inf, transform: bool = False
                       ) -> List[Union[float, int, str]]:
         neighbors = []  # type: List[Union[float, int, str]]
